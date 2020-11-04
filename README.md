@@ -1,4 +1,5 @@
-# Buildingblock-Sample
+# BuildingBlock-Application
+
 Modelo para criação de Buildingblock ASP.NET Core no estado da arte 🚀
 
 Para saber mais sobre templates, acesse [a documentação da microsoft](https://docs.microsoft.com/en-us/dotnet/core/tools/custom-templates).
