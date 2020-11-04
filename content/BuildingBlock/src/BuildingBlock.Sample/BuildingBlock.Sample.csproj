@@ -1,0 +1,9 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFrameworks>netcoreapp3.1</TargetFrameworks>
+    <IsPackable>true</IsPackable>
+    <PackageVersion>1.0.0</PackageVersion>
+    <NuspecProperties>version=$(Version)</NuspecProperties>
+    <OpenApiGenerateDocumentsOnBuild>false</OpenApiGenerateDocumentsOnBuild>
+  </PropertyGroup>
+</Project>

@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <PackageType>Template</PackageType>
+    <PackageVersion>1.0.0</PackageVersion>
+    <Version>1.0.0</Version>
+    <PackageId>CodInsights.Scaffold.BuildingBlock</PackageId>
+    <Title>Scaffold BuildingBlock</Title>
+    <Authors>Thiago de Melo Lima</Authors>
+    <Description>Modelo para criação de Buildingblock ASP.NET Core no estado da arte</Description>
+    <PackageTags>dotnet-new;templates;scaffold;buildingblock;libs</PackageTags>
+    <NoPackageAnalysis>true</NoPackageAnalysis>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <IncludeContentInPack>true</IncludeContentInPack>
+    <IncludeBuildOutput>false</IncludeBuildOutput>
+    <ContentTargetFolders>content</ContentTargetFolders>
+  </PropertyGroup>
+  <ItemGroup>
+    <Content Include="**\*" Exclude="**\bin\**\*;**\obj\**\*;**\.vs\**\*" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="content/**/*.cs" />
+  </ItemGroup>
+</Project>

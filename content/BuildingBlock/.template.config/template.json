@@ -1,0 +1,71 @@
+{
+    "$schema": "http://json.schemastore.org/template",
+    "author": "Thiago de Melo Lima",
+    "classifications": [
+        "BuildingBlock",
+        "Libs",
+        "CodInsights"
+    ],
+    "name": "Scaffold BuildingBlock",
+    "identity": "CodInsights.Scaffold.BuildingBlock.CSharp",
+    "groupIdentity": "CodInsights.Scaffold.BuildingBlock",
+    "description": "Modelo para criação de Buildingblock ASP.NET Core no estado da arte",
+    "shortName": "buildingblock",
+    "tags": {
+        "language": "C#",
+        "type": "project"
+    },
+    "sourceName": "BuildingBlock.Sample",
+    "preferNameDirectory": true,
+    "symbols": {
+        "empty": {
+            "type": "parameter",
+            "datatype": "bool",
+            "description": "Se especificado, remova as classes do projeto na criação.",
+            "defaultValue": "false"
+        },
+        "skipRestore": {
+            "type": "parameter",
+            "datatype": "bool",
+            "description": "Se especificado, ignora a restauração automática do projeto na criação.",
+            "defaultValue": "false"
+        },
+        "projectName": {
+            "type": "parameter",
+            "description": "O mesmo que o nome do projeto GitHub, para que o projeto possa ser encontrado em Jaeger, por exemplo, ci-buildingblock-myproject",
+            "isRequired": true,
+            "replaces": "project-name"
+        }
+    },
+    "postActions": [{
+            "condition": "(!skipRestore)",
+            "description": "Restaurar pacotes NuGet exigidos por este projeto.",
+            "manualInstructions": [{
+                    "text": "Run 'dotnet restore'"
+                }
+            ],
+            "actionId": "210D431B-A78B-4D2F-B762-4ED3E3EA9025",
+            "continueOnError": true
+        }
+    ],
+    "primaryOutputs": [{
+            "path": "src/BuildingBlock.Sample.sln"
+        }
+    ],
+    "sources": [{
+            "modifiers": [{
+                    "condition": "(empty)",
+                    "exclude": [
+                        "src/BuildingBlock.Sample.Tests.Unit/*.cs"
+                    ]
+                },
+                {
+                    "condition": "!(empty)",
+                    "exclude": [
+                        
+                    ]
+                }
+            ]
+        }
+    ]
+}
