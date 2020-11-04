@@ -1,4 +1,4 @@
-# BuildingBlock-Application
+# BuildingBlock-Application ![CodeQL](https://github.com/RDPodcasting/BuildingBlock-Application/workflows/CodeQL/badge.svg)
 
 Modelo para criação de Buildingblock ASP.NET Core no estado da arte 🚀
 
